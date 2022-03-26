@@ -18,7 +18,7 @@ import uy.com.sofka.demoappempresarial.models.RequestDTO;
 import uy.com.sofka.demoappempresarial.services.RandomService;
 
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping(value = "/r")
 public class RandomController {
 
