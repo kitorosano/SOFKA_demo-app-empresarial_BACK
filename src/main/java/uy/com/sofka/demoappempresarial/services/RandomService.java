@@ -40,12 +40,12 @@ public class RandomService {
       var availbleRange = (endRandom - startRandom);
       int intervalDistance = LocalTime.of(0, entity.getMinuteIntervals()).toSecondOfDay();
       if(availbleRange < intervalDistance) 
-        throw new IllegalArgumentException("No se puede generar con ese intervalo, cambielo o ajuste los horarios plis");
+        throw new IllegalArgumentException("No se puede generar con ese intervalo, cambielo o ajuste los horarios.");
 
 
       var maxRandomBetweenRange = availbleRange / intervalDistance;
       if(maxRandomBetweenRange < entity.getGenerateMany()) 
-        throw new IllegalArgumentException("No se puede generar toda esa cantidad, reduzcala plis");
+        throw new IllegalArgumentException("No se puede generar toda esa cantidad, reduzcala.");
 
       List<LocalTime> randomClockList = IntStream.range(0, maxRandomBetweenRange)
                                                 .boxed()
